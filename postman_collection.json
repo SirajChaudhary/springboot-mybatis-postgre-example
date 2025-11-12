@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "25ba49a6-c6e1-4b8e-90eb-b417a0c80b58",
+		"name": "SpringBoot MyBatis Example",
+		"description": "Postman collection for EmployeeController endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27668494"
+	},
+	"item": [
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Amit Sharma\",\n  \"salary\": 75000,\n  \"departmentId\": 1,\n  \"projectId\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Siraj Chaudhary\",\n  \"salary\": 75000,\n  \"departmentId\": 1,\n  \"projectId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Nov 2025 18:35:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"name\": \"Siraj Chaudhary\",\n    \"salary\": 75000,\n    \"departmentName\": null,\n    \"projectName\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Amit Sharma Updated\",\n  \"salary\": 78000,\n  \"departmentId\": 1,\n  \"projectId\": 2\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Employee",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Amit Sharma Updated\",\n  \"salary\": 78000,\n  \"departmentId\": 1,\n  \"projectId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Nov 2025 18:37:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Amit Sharma Updated\",\n    \"salary\": 78000,\n    \"departmentName\": null,\n    \"projectName\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Employee by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Employee by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Nov 2025 05:52:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Amit Sharma Updated\",\n    \"salary\": 78000,\n    \"departmentName\": \"Engineering\",\n    \"projectName\": \"Beta Project\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Employee",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employees/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"9"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 11 Nov 2025 18:42:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get All Employees with Join",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Employees with Join",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employees/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Nov 2025 05:52:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Rohit Verma\",\n        \"salary\": 68000,\n        \"departmentName\": \"Engineering\",\n        \"projectName\": \"Beta Project\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Priya Singh\",\n        \"salary\": 72000,\n        \"departmentName\": \"Marketing\",\n        \"projectName\": \"Beta Project\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Sneha Kapoor\",\n        \"salary\": 80000,\n        \"departmentName\": \"Sales\",\n        \"projectName\": \"Gamma Project\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Ankit Mehta\",\n        \"salary\": 70000,\n        \"departmentName\": \"Engineering\",\n        \"projectName\": \"Gamma Project\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Pooja Nair\",\n        \"salary\": 65000,\n        \"departmentName\": \"Marketing\",\n        \"projectName\": \"Alpha Project\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Rajesh Kumar\",\n        \"salary\": 90000,\n        \"departmentName\": \"Sales\",\n        \"projectName\": \"Beta Project\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Deepika Reddy\",\n        \"salary\": 60000,\n        \"departmentName\": \"Human Resources\",\n        \"projectName\": \"Gamma Project\"\n    },\n    {\n        \"id\": 1,\n        \"name\": \"Amit Sharma Updated\",\n        \"salary\": 78000,\n        \"departmentName\": \"Engineering\",\n        \"projectName\": \"Beta Project\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Search Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/search?search=Amit&sortBy=name&sortOrder=asc&page=1&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Amit"
+						},
+						{
+							"key": "sortBy",
+							"value": "name"
+						},
+						{
+							"key": "sortOrder",
+							"value": "asc"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employees/search?search=Gamma Project&sortBy=name&sortOrder=asc&page=1&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Gamma Project"
+								},
+								{
+									"key": "sortBy",
+									"value": "name"
+								},
+								{
+									"key": "sortOrder",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Nov 2025 05:54:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 5,\n        \"name\": \"Ankit Mehta\",\n        \"salary\": 70000,\n        \"departmentName\": \"Engineering\",\n        \"projectName\": \"Gamma Project\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Deepika Reddy\",\n        \"salary\": 60000,\n        \"departmentName\": \"Human Resources\",\n        \"projectName\": \"Gamma Project\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Sneha Kapoor\",\n        \"salary\": 80000,\n        \"departmentName\": \"Sales\",\n        \"projectName\": \"Gamma Project\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

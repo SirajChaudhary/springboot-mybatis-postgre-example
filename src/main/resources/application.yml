@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: springboot-mybatis-postgre-example
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/<YOUR_POSTGRE_DB_NAME>
+    username: <YOUR_POSTGRE_USER>
+    password: <YOUR_POSTGRE_PASSWORD>
+    hikari:
+      maximum-pool-size: 10
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.example.entity
+  configuration:
+    map-underscore-to-camel-case: true
